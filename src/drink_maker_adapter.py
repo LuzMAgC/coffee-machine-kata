@@ -16,4 +16,7 @@ class DrinkMakerAdapter(DrinkMakerInterface):
         if drink == Drinks.COFFEE:
             self.drink_maker.command('C::')
             return
+        elif drink == Drinks.TEA:
+            self.drink_maker.command('T::')
+            return
         self.drink_maker.command('H::')
