@@ -48,3 +48,13 @@ class TestDrinkMakerAdapter:
 
         # Then
         drink_maker_mock.command.assert_called_once_with('T:1:0')
+
+    def test_call_command_t20_given_tea_with_two_sugars(self, drink_maker_mock):
+        # Given
+        drink_maker_adapter = DrinkMakerAdapter(drink_maker_mock)
+
+        # When
+        drink_maker_adapter.make_drink(Drinks.TEA, 2)
+
+        # Then
+        drink_maker_mock.command.assert_called_once_with('T:2:0')

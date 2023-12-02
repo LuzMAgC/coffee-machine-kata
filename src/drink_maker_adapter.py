@@ -13,8 +13,8 @@ class DrinkMakerAdapter(DrinkMakerInterface):
         pass
 
     def make_drink(self, drink: Drinks, sugar: int) -> None:
-        if sugar == 1:
-            self.drink_maker.command('T:1:0')
+        if sugar != 0:
+            self.drink_maker.command('T:'+str(sugar)+':0')
             return
 
         drink_char = 'H'
