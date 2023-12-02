@@ -25,4 +25,6 @@ class CoffeeMachine:
         self.sugar += 1
 
     def remove_sugar(self) -> None:
+        if self.sugar == 0:
+            return
         self.sugar -= 1
