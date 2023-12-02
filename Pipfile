@@ -16,6 +16,7 @@ pre-commit = "*"
 install = "*"
 pytest-docker-compose = "*"
 pytest-watcher = "*"
+pytest-mock = "*"
 
 [requires]
 python_version = "3.9"
