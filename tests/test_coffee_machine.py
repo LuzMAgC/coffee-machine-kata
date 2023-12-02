@@ -19,3 +19,14 @@ class TestCoffeeMachine:
 
         # Then
         drink_maker_adapter_mock.make_drink.assert_called_once_with(Drinks.CHOCOLATE, 0)
+
+    def test_prepare_coffee_without_sugar(self, drink_maker_adapter_mock):
+        # Given
+        coffee_machine = CoffeeMachine(drink_maker_adapter_mock)
+
+        # When
+        coffee_machine.set_drink(Drinks.COFFEE)
+        coffee_machine.make_drink()
+
+        # Then
+        drink_maker_adapter_mock.make_drink.assert_called_once_with(Drinks.COFFEE, 0)
