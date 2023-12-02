@@ -13,7 +13,4 @@ class CoffeeMachine:
         self.drink = drink
 
     def make_drink(self) -> None:
-        if self.drink == Drinks.CHOCOLATE:
-            self.drink_maker_adapter.make_drink(Drinks.CHOCOLATE, 0)
-            return
-        self.drink_maker_adapter.make_drink(Drinks.COFFEE, 0)
+        self.drink_maker_adapter.make_drink(self.drink, 0)
