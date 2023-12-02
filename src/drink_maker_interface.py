@@ -2,7 +2,7 @@ from abc import abstractmethod
 from src.drinks import Drinks
 
 
-class DrinkMakerAdapter:
+class DrinkMakerInterface:
     @abstractmethod
     def make_drink(self, drink: Drinks, sugar: int) -> None:
         pass

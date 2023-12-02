@@ -1,13 +1,13 @@
-from src.drink_maker_adapter import DrinkMakerAdapter
+from src.drink_maker_interface import DrinkMakerInterface
 from src.drinks import Drinks
 
 
 class CoffeeMachine:
-    drink_maker_adapter: DrinkMakerAdapter
+    drink_maker_adapter: DrinkMakerInterface
     drink: Drinks = None
     sugar: int = 0
 
-    def __init__(self, drink_maker_adapter: DrinkMakerAdapter):
+    def __init__(self, drink_maker_adapter: DrinkMakerInterface):
         self.drink_maker_adapter = drink_maker_adapter
 
     def set_drink(self, drink: Drinks) -> None:
