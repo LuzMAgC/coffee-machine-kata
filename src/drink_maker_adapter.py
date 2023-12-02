@@ -10,7 +10,7 @@ class DrinkMakerAdapter(DrinkMakerInterface):
         self.drink_maker = drink_maker
 
     def print_message(self, message: str) -> None:
-        self.drink_maker.command('M:Error')
+        self.drink_maker.command('M:' + message)
 
     def make_drink(self, drink: Drinks, sugar: int) -> None:
         sugar_char = ''

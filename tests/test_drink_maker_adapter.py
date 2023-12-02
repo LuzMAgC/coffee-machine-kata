@@ -78,3 +78,13 @@ class TestDrinkMakerAdapter:
 
         # Then
         drink_maker_mock.command.assert_called_once_with('M:Error')
+
+    def test_print_something_went_wrong_message(self, drink_maker_mock):
+        # Given
+        drink_maker_adapter = DrinkMakerAdapter(drink_maker_mock)
+
+        # When
+        drink_maker_adapter.print_message('Something went wrong')
+
+        # Then
+        drink_maker_mock.command.assert_called_once_with('M:Something went wrong')
