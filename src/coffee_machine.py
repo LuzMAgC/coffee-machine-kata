@@ -20,4 +20,6 @@ class CoffeeMachine:
         self.drink_maker_adapter.make_drink(self.drink, self.sugar)
 
     def add_sugar(self) -> None:
+        if self.sugar == 2:
+            return
         self.sugar += 1
