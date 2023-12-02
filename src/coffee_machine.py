@@ -23,3 +23,6 @@ class CoffeeMachine:
         if self.sugar == 2:
             return
         self.sugar += 1
+
+    def remove_sugar(self) -> None:
+        self.sugar = 1
