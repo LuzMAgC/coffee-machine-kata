@@ -41,3 +41,14 @@ class TestCoffeeMachine:
 
         # Then
         drink_maker_adapter_mock.make_drink.assert_called_once_with(Drinks.TEA, 0)
+
+    def test_shows_error_when_no_drink_is_selected(self, drink_maker_adapter_mock):
+        # Given
+        coffee_machine = CoffeeMachine(drink_maker_adapter_mock)
+
+        # When
+        coffee_machine.make_drink()
+
+        # Then
+        drink_maker_adapter_mock.print_message.assert_called_once_with('Please select a drink first')
+        drink_maker_adapter_mock.make_drink.assert_not_called()

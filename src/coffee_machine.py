@@ -13,4 +13,7 @@ class CoffeeMachine:
         self.drink = drink
 
     def make_drink(self) -> None:
+        if self.drink is None:
+            self.drink_maker_adapter.print_message('Please select a drink first')
+            return
         self.drink_maker_adapter.make_drink(self.drink, 0)
